@@ -6,6 +6,9 @@ sys.path[0:0] = [
   '/tmp/.buildout/eggs/important_package.egg'
 ]
 
+def buggy_initialization_code(x):
+  x.append(None)
+
 import important_package
 
 if __name__ == '__main__':

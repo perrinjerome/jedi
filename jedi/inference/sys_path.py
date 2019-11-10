@@ -159,6 +159,7 @@ def _get_paths_from_buildout_script(inference_state, buildout_script_path):
         inference_state, module_node, file_io,
         string_names=None,
         code_lines=get_cached_code_lines(inference_state.grammar, buildout_script_path),
+        is_package=True
     ).as_context()
     for path in check_sys_path_modifications(module_context):
         yield path
